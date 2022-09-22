@@ -21,13 +21,16 @@ body{
 
 /*###### HEADER/NAVBAR #######*/
 
+.navbar-custom {
+	background: rgb(255,255,255);
+background: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(0,123,255,1) 100%);S
+}
 
 
 .logo-img {
 	border-radius: 50%;
 	width: 40px;
 	margin-right: 10px;
-
 }
 
 
@@ -139,10 +142,10 @@ main {
 
 	align-items: center;
 
-	height: 85px;
+	height: 105px;
 
 
-	background: url(../media/fotos/footer_pic.jpg);
+	background: url(../media/fotos/footer_pic_reducida.jpg);
 	background-size: contain;
 
 	box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
