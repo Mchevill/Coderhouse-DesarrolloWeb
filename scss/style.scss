@@ -1,0 +1,76 @@
+$background-footer-img: url(../media/fotos/footer_pic_reducida.jpg);
+
+@import "global";
+
+
+/*###### INDEX #######*/
+@import "index";
+
+/*###### GALLERY #######*/
+@import "gallery";
+
+/*###### SOBRE MI #######*/
+@import "about";
+
+/*###### SERVICIOS #######*/
+@import "service";
+
+/*###### CONTACTO #######*/
+
+@import "contact";
+
+
+/*###### HEADER/NAVBAR #######*/
+
+.navbar-custom {
+	background: rgb(255,255,255);
+	background: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(0,123,255,1) 100%);
+}
+
+.logo-img {
+	border-radius: 50%;
+	width: 40px;
+	margin-right: 10px;
+}
+
+/*###### FOOTER #######*/
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 105px;
+
+	background: $background-footer-img;
+	background-size: contain;
+
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+
+	a {
+		margin-right:10px;
+
+		img {
+			height: 30px;
+			width: 30px;
+		}
+	}
+}
+
+@media (min-width: 0px) and (max-width: 767px){
+
+	/*###### FOOTER #######*/
+
+	.footer {
+		height:85px;
+		background-size: cover;
+		justify-content: flex-start;
+		padding-left: 10px;
+
+		a{
+			margin-right: 20px;
+		}
+	}
+
+}

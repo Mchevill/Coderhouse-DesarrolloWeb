@@ -1,0 +1,48 @@
+
+
+
+.bio{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.img_bio{
+	height: 360px;
+	object-fit: scale-down;
+}
+
+.bio_text {
+	h2{
+		margin: 0px 0px 20px 20px;
+	}
+
+	p {
+		margin-left: 20px;
+	}
+}
+
+
+/*###### RESPONSIVE - SOBRE MI #######*/
+
+@media (min-width: 0px) and (max-width: 767px){
+	.bio{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	.img_bio{
+		width: 100%;
+		height: 255px;
+	}
+
+	.bio_text {
+		h2 {
+			margin: 5px;
+		}
+		p {
+			margin-left: 10px;
+		}
+	}
+
+}

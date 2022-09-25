@@ -23,7 +23,7 @@ body{
 
 .navbar-custom {
 	background: rgb(255,255,255);
-background: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(0,123,255,1) 100%);S
+	background: linear-gradient(177deg, rgba(255,255,255,1) 0%, rgba(0,123,255,1) 100%);
 }
 
 
@@ -148,7 +148,7 @@ main {
 	background: url(../media/fotos/footer_pic_reducida.jpg);
 	background-size: contain;
 
-	box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -443,8 +443,6 @@ label {
 	.textarea{
 		width: 100%;
 	}
-
-
 } 
 
 
