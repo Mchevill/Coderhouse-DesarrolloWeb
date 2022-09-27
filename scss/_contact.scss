@@ -1,0 +1,64 @@
+form {
+	h1 {
+		margin: 0px 40px;
+	}
+}
+
+.contacto {
+	margin: 0px 40px;
+	list-style-type: none;
+}
+
+
+label {
+	font-size: 17px;
+	font-weight: 500;
+	color: #ffffff;
+}
+
+.boton {
+	background-color: #2377db;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+	color: #FFFFFF;
+
+
+	/*Border*/
+	border: 2px solid #2377db;
+
+	transition-duration: 0.4s;
+
+	border-radius: 5px;
+
+	&:hover {
+		background-color: #FFFFFF;
+		color: #2377db;
+	}
+
+}
+
+
+
+/*###### RESPONSIVE - SOBRE MI #######*/
+
+@media (min-width: 0px) and (max-width: 767px){
+	form {
+		height: 600px;
+
+		h1 {
+			margin: 10px 10px;
+		}
+	}
+	
+	.contacto {
+		margin: 10px 10px;
+	}
+
+	.textarea{
+		width: 100%;
+	}
+
+}

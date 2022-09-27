@@ -1,0 +1,25 @@
+$background_image: url("../media/background/cool-background.png");
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	background-image: $background_image;
+	background-size: cover;
+
+	position: relative;
+
+    
+    min-height: 100vh;
+}
+
+
+main {
+	padding: 30px 10px;
+
+}
