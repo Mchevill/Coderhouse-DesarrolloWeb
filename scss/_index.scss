@@ -12,6 +12,8 @@
 	}
 }
 
+
+
 .video {
 	margin-bottom: 20px;
 	width: 560px;
@@ -19,6 +21,23 @@
 	border: 0;
 }
 
+.text {
+	color: #FFFFFF;
+	font-size: 18px;
+}
+
+.title {
+	@extend .text;
+	font-size: 30px;
+
+	&:hover{
+		color: #FFFFFF;
+	}
+}
+
+.text--gallery {
+	@extend .text
+}
 
 
 /*###### SECTION 2 #######*/
@@ -31,6 +50,16 @@
 	height: 300px;
 }
 
+.title{
+	
+
+	&:hover {
+		color: #FFFFFF;
+	}
+}
+
+
+
 
 /*###### SECTION 2/ IMAGENES #######*/
 
@@ -41,47 +70,36 @@
 	margin-bottom: 10px;
 }
 
-
-.central {
-	width: 50%;
-	height: 200px;
+@mixin images($width,$height,$left,$top,$zindex,$animation){
 	position: absolute;
-	left: 25%;
-	z-index: 1;
+	width: $width;
+	height: $height;
+	left: $left;
+	top: $top;
+	z-index: $zindex;
+
 	object-fit: cover;
 
-	animation-name: slide_central;
+	animation-name: $animation;
 	animation-duration: 10s;
 	animation-delay: 2s;
 	animation-iteration-count: infinite;
+}
+
+
+.central {
+	@include images(50%,200px,25%,0%,1,slide_central);
+
 }
 
 .derecha {
-	position: absolute;
-	right: 0%;
-	width: 35%;
-    height: 150px;
-    top: 12.5%;
-    object-fit: cover;
-
-    animation-name: slide_derecha;
-	animation-duration: 10s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
+	@include images(35%,150px,65%,12.5%,0,slide_derecha);
 }
 
 .izquierda {
-	position: absolute;
-	left: 0%;
-	width: 35%;
-    height: 150px;
-    top: 12.5%;
-   	object-fit: cover;
 
-   	animation-name: slide_izquierda;
-	animation-duration: 10s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
+	@include images(35%,150px,0%,12.5%,0,slide_izquierda);
+
 }
 
 
@@ -128,33 +146,6 @@
 		height: 200px;
 	}
 
-
-	.central {
-		width: 50%;
-		height: 200px;
-		position: absolute;
-		left: 25%;
-		z-index: 1;
-		object-fit: cover;
-	}
-
-	.derecha {
-		position: absolute;
-		right: 0%;
-		width: 35%;
-	    height: 150px;
-	    top: 12.5%;
-	    object-fit: cover;
-	}
-
-	.izquierda {
-		position: absolute;
-		left: 0%;
-		width: 35%;
-	    height: 150px;
-	    top: 12.5%;
-	   	object-fit: cover;
-	}
 }
 
 
@@ -162,10 +153,12 @@
 
 /*###### ANIMTION #######*/
 
-
 @keyframes slide_central {
 
+
+
 	0% {
+
 		width: 50%;
 		height: 200px;
 		left: 25%;
@@ -209,7 +202,7 @@
 
 	0% {
 		position: absolute;
-		right: 0%;
+		left: 65%;
 		width: 35%;
 		height: 150px;
 		top: 12.5%;
@@ -221,7 +214,7 @@
 		width: 35%;
 	    height: 150px;
 	    top: 12.5%;
-		right: 65%;
+		left: 0%;
 		z-index: 1;
 		object-fit: cover;
 	}
@@ -230,7 +223,7 @@
 	50% {
 		width: 50%;
 		height: 200px;
-		right: 25%;
+		left: 25%;
 		top: 0%;
 		z-index: 2;
 		object-fit: cover;
@@ -239,7 +232,7 @@
 	
 	100% {
 		position: absolute;
-		right: 0%;
+		left: 65%;
 		width: 35%;
 	    height: 150px;
 	    top: 12.5%;
