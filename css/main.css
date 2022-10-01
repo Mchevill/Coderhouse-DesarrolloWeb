@@ -29,12 +29,24 @@ main {
   height: 315px;
   border: 0; }
 
+.text, .title, .text--gallery {
+  color: #FFFFFF;
+  font-size: 18px; }
+
+.title {
+  font-size: 30px; }
+  .title:hover {
+    color: #FFFFFF; }
+
 /*###### SECTION 2 #######*/
 .section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 30px;
   height: 300px; }
+
+.title:hover {
+  color: #FFFFFF; }
 
 /*###### SECTION 2/ IMAGENES #######*/
 .img-gallery {
@@ -44,10 +56,11 @@ main {
   margin-bottom: 10px; }
 
 .central {
+  position: absolute;
   width: 50%;
   height: 200px;
-  position: absolute;
   left: 25%;
+  top: 0%;
   z-index: 1;
   object-fit: cover;
   animation-name: slide_central;
@@ -57,10 +70,11 @@ main {
 
 .derecha {
   position: absolute;
-  right: 0%;
   width: 35%;
   height: 150px;
+  left: 65%;
   top: 12.5%;
+  z-index: 0;
   object-fit: cover;
   animation-name: slide_derecha;
   animation-duration: 10s;
@@ -69,10 +83,11 @@ main {
 
 .izquierda {
   position: absolute;
-  left: 0%;
   width: 35%;
   height: 150px;
+  left: 0%;
   top: 12.5%;
+  z-index: 0;
   object-fit: cover;
   animation-name: slide_izquierda;
   animation-duration: 10s;
@@ -103,28 +118,7 @@ main {
     position: relative;
     margin-top: 10px;
     margin-right: 0px;
-    height: 200px; }
-  .central {
-    width: 50%;
-    height: 200px;
-    position: absolute;
-    left: 25%;
-    z-index: 1;
-    object-fit: cover; }
-  .derecha {
-    position: absolute;
-    right: 0%;
-    width: 35%;
-    height: 150px;
-    top: 12.5%;
-    object-fit: cover; }
-  .izquierda {
-    position: absolute;
-    left: 0%;
-    width: 35%;
-    height: 150px;
-    top: 12.5%;
-    object-fit: cover; } }
+    height: 200px; } }
 
 /*###### ANIMTION #######*/
 @keyframes slide_central {
@@ -160,7 +154,7 @@ main {
 @keyframes slide_derecha {
   0% {
     position: absolute;
-    right: 0%;
+    left: 65%;
     width: 35%;
     height: 150px;
     top: 12.5%;
@@ -170,19 +164,19 @@ main {
     width: 35%;
     height: 150px;
     top: 12.5%;
-    right: 65%;
+    left: 0%;
     z-index: 1;
     object-fit: cover; }
   50% {
     width: 50%;
     height: 200px;
-    right: 25%;
+    left: 25%;
     top: 0%;
     z-index: 2;
     object-fit: cover; }
   100% {
     position: absolute;
-    right: 0%;
+    left: 65%;
     width: 35%;
     height: 150px;
     top: 12.5%;
