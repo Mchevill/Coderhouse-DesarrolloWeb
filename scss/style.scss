@@ -1,4 +1,5 @@
 $background-footer-img: url(../media/fotos/footer_pic_reducida.jpg);
+$background-footer-img-mobile: url(../media/fotos/footer_pic_reducida.jpg);
 
 @import "global";
 
@@ -44,6 +45,7 @@ $background-footer-img: url(../media/fotos/footer_pic_reducida.jpg);
 	height: 105px;
 
 	background: $background-footer-img;
+	background-repeat: 3;
 	background-size: contain;
 
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
@@ -67,6 +69,8 @@ $background-footer-img: url(../media/fotos/footer_pic_reducida.jpg);
 		background-size: cover;
 		justify-content: flex-start;
 		padding-left: 10px;
+		height: 105px;
+		background: $background-footer-img-mobile;
 
 		a{
 			margin-right: 20px;
